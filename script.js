@@ -89,4 +89,14 @@ window.unlockCard = async function(cardId) {
     await saveCollection();
     renderCollection();
   }
+
+import { signOut } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
+
+window.logoutUser = async () => {
+  await signOut(auth);
+  localStorage.clear();
+  window.location.href = "login.html";
+};
+
+  
 };
