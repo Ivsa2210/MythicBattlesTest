@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mythic Battles TCG</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="selectPack('Starter Pack')">
+  <header>
+    <h1>Mythic Battles TCG</h1>
+    <nav>
+      <ul>
+        <li><a href="#demo">Demo</a></li>
+        <li><a href="#collection">Collection</a></li>
+        <li><a href="#rules">Rules</a></li>
+        <li><a href="#packs">Packs</a></li>
+      </ul>
+    </nav>
+    <button onclick="logoutUser()">Logout</button>
+  </header>
+
+  <section id="hero">
+    <h2>Enter the Realm of Mythic Creatures</h2>
+    <p>Collect. Battle. Evolve. The next-gen card game for heroes.</p>
+
+    <div class="packs">
+      <div class="pack" onclick="selectPack('Starter Pack')">Starter Pack</div>
+      <div class="pack" onclick="selectPack('Legendary Pack')">Legendary Pack</div>
+      <div class="pack" onclick="selectPack('Mythic Vault')">Mythic Vault</div>
+    </div>
+
+    <div id="pack-info"></div>
+    <button onclick="openPack()">Open a Free Pack</button>
+    <div id="pack-stats"></div>
+    <div class="card-gallery"></div>
+  </section>
+
+  <section id="demo">
+    <h2>Quick Battle Demo</h2>
+    <div id="battlefield">
+      <div class="card-slot" id="player-card">Your Card</div>
+      <div class="vs">VS</div>
+      <div class="card-slot" id="enemy-card">Enemy Card</div>
+    </div>
+    <button onclick="startBattle()">Draw & Battle</button>
+    <p id="battle-result"></p>
+  </section>
+
+  <section id="collection">
+    <h2>Your Collection</h2>
+    <div id="cardContainer"></div>
+    <div class="collection-gallery"></div>
+  </section>
+
+  <section id="rules">
+    <h2>How to Play</h2>
+    <ol>
+      <li>Each player draws 1 card.</li>
+      <li>Each card has Attack, Defense, and Special Power.</li>
+      <li>The card with higher Attack wins, unless the opponent's Defense is greater.</li>
+      <li>Special Power can override if triggered (chance-based).</li>
+    </ol>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Mythic Battles TCG. All Rights Reserved.</p>
+  </footer>
+
+  <!-- ✅ Only one script load, as module -->
+  <script type="module" src="auth.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
