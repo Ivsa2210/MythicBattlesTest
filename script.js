@@ -64,8 +64,7 @@ function renderCollection() {
       <strong>ATK:</strong> ${card.atk} | <strong>DEF:</strong> ${card.def}<br>
       <strong>Special:</strong> ${card.sp}<br>
       <em>${card.lore}</em><br>
-      ${owned ? '<em>Owned</em>' : `<button onclick="unlockCard(${card.id})">Unlock</button>`}
-    `;
+     ;
     container.appendChild(div);
   }
 }
